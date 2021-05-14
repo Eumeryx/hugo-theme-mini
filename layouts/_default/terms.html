@@ -1,5 +1,7 @@
 {{ define "main" }}
-{{ partial "profile.html" . }}
+{{ if .IsHome }}
+      {{ partial "profile.html" . }}
+{{ end }}
 <section id="tags">
       {{ $data := .Data }}
       {{ range $key, $value := .Data.Terms.ByCount }}

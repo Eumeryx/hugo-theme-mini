@@ -1,6 +1,7 @@
 {{ define "main" }}
-{{ partial "profile.html" . }}
-
+{{ if .IsHome }}
+    {{ partial "profile.html" . }}
+{{ end }}
 <section id="archive">
    
     {{ range .Data.Pages.GroupByDate "2006" }}

@@ -72,6 +72,21 @@ tr:nth-child(odd)>td {
   background: #fcfcfc;
 }
 
+h2::before {
+    content: '#';
+}
+
+h3::before {
+    content: '|';
+}
+
+h2,h3 {
+    &::before {
+        margin-right: 5px;
+        color: #2d96bd;
+    }
+}
+
 h1,
 h2,
 h3 {
