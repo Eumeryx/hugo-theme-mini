@@ -228,8 +228,8 @@ nav.navigation a.button {
 
 .profile .avatar {
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: $avatar-width;
+  height: $avatar-height;
   border-radius: 50%;
 }
 
@@ -251,7 +251,7 @@ nav.navigation a.button {
 
 /* index post list */
 #list-page {
-  max-width: 580px;
+  max-width: $list-page-width;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -319,7 +319,7 @@ nav.navigation a.button {
 
 /* single page */
 #single {
-  max-width: 680px;
+  max-width: $post-page-width;
   margin: 60px auto 0 auto;
   padding: 0 64px;
 }
@@ -372,7 +372,7 @@ nav.navigation a.button {
 
 
 #archive {
-  max-width: 580px;
+  max-width: $archive-page-width;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -424,7 +424,7 @@ nav.navigation a.button {
 
 /* taxonomy */
 #tags {
-  max-width: 700px;
+  max-width: $tags-page-width;
   margin: 48px auto 0 auto;
   padding: 0 12px;
   text-align: center;
@@ -457,14 +457,14 @@ nav.navigation a.button {
 
 /* section page */
 #section {
-  max-width: 580px;
+  max-width: $section-page-width;
   margin: 48px auto 0 auto;
   padding: 0 12px;
 }
 
 /* 404 page */
 #page-404 {
-  max-width: 580px;
+  max-width: $page-404-width;
   margin: 0 auto;
   padding: 0 24px;
 }

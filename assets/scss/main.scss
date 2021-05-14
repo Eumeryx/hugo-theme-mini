@@ -1,0 +1,10 @@
+$avatar-width: {{ .Site.Params.avatarWidth | default "100px" }};
+$avatar-height: {{ .Site.Params.avatarHeight | default "100px" }};
+$list-page-width: {{ .Site.Params.listPageWidth | default "780px" }};
+$post-page-width: {{ .Site.Params.postPageWidth | default "780px" }};
+$archive-page-width: {{ .Site.Params.archivePageWidth | default "780px" }};
+$tags-page-width: {{ .Site.Params.tagsPageWidth | default "780px" }};
+$section-page-width: {{ .Site.Params.sectionPageWidth | default "780px" }};
+$page-404-width: {{ .Site.Params.page404Width | default "780px" }};
+
+@import "style.scss" 
