@@ -5,7 +5,7 @@
 
     <div class="tip">
         <span>
-          {{ .Date.Format "Jan 2, 2006 15:04" }}
+          {{ .Date.Format (.Site.Params.postDateFormat | default "Jan 2, 2006 15:04") }}
         </span>
         <span class="split">
           ·

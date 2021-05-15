@@ -12,7 +12,7 @@
             {{ range .Pages }}
                 <div class="value">
                   <div class="date">
-                      {{ .Date.Format "Jan 2" }}
+                      {{ .Date.Format (.Site.Params.archiveDateFormat | default "Jan 2") }}
                   </div>
                   <div class="title">
                       <a href="{{ .Permalink }}">
