@@ -405,8 +405,14 @@ nav.navigation a.button {
 				content: '#\00A0';
 				color: #2d96bd;
 			}
-			li::marker {
-				content: '|\00A0';
+			li {
+				&::marker {
+					content: '|\00A0';
+				}
+				
+				li::marker {
+					content: unset;
+				}
 			}
 		}
 
