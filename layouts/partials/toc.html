@@ -8,7 +8,7 @@
         {{ $ToCs | safeHTML }}
     </div>
     {{ if and .Site.Params.enableTocButton .Site.Params.enableTocButton }}
-    <div id="toc-button" onclick='$("#toc").toggle()'>
+    <div id="toc-button" onclick='toc.style.display == "none" ? toc.style.display = "block" : toc.style.display = "none";'>
         {{ .Site.Params.tocButtonTitle | default "ToC" }}
     </div>
     {{ end }}
