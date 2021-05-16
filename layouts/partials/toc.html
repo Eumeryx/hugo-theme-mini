@@ -1,0 +1,17 @@
+{{ if .Params.toc | default .Site.Params.enableToc }}
+
+{{ $ToCs := .TableOfContents }}
+{{ if in $ToCs "<li>" }}
+<aside class="post-toc">
+    <div id="toc">
+        <h2>{{ .Site.Params.tocTitle | default "Contents" }}</h2>
+        {{ $ToCs | safeHTML }}
+    </div>
+    {{ if and .Site.Params.enableTocButton .Site.Params.enableTocButton }}
+    <div id="toc-button" onclick='$("#toc").toggle()'>
+        {{ .Site.Params.tocButtonTitle | default "ToC" }}
+    </div>
+    {{ end }}
+</aside>
+{{ end }}
+{{ end }}
