@@ -10,12 +10,14 @@
         <span class="split">
           ·
         </span>
+        {{ with .Params.tags }}
         <span>
-          {{ range first 1 .Params.tags }}
+          {{ range first 1 . }}
           [<a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>]
           {{ end }}
         </span>
           ·
+        {{ end }}
         <span>
           {{ if lt 1 .WordCount }}
             {{ .WordCount }} words
