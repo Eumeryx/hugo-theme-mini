@@ -385,6 +385,11 @@ nav.navigation a.button {
   color: #0366d6;
 }
 
+#archive-title {
+    text-align: right;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 
 #archive {
   max-width: $archive-page-width;
@@ -404,27 +409,26 @@ nav.navigation a.button {
   margin-bottom: 12px;
 }
 #archive .group .value {
+  flex-wrap: wrap;
+  word-wrap: break-word;
   display: block;
   font-size: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 #archive .group .value .date {
-  display: inline-block;
   color: #999;
   width: 60px;
 }
-#archive .group .value .title {
-  display: inline;
-}
+
 #archive .group .value .title a {
-  color:#404040;
+
+  color: #404040;
 }
 #archive .group .value .title a:hover {
   color: #0366d6;
 }
 #archive .group .value .tags {
-  display: inline;
-  margin-left: 7px;
+  float: right;
 }
 #archive .group .value .tags a {
   background: #f2f2f2;

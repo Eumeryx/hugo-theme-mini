@@ -3,6 +3,7 @@
     {{ partial "profile.html" . }}
 {{ end }}
 <section id="archive">
+    <h1 id="archive-title">Archive</h1>
     {{ range .Data.Pages.GroupByDate "2006" }}
         <div class="group">
             <h3 class="key">
@@ -11,22 +12,21 @@
 
             {{ range .Pages }}
                 <div class="value">
-                  <div class="date">
+                  <span class="date">
                       {{ .Date.Format (.Site.Params.archiveDateFormat | default "Jan 2") }}
-                  </div>
-                  <div class="title">
+                  </span>
+                  <span class="title">
                       <a href="{{ .Permalink }}">
                           {{ .Title }}
                       </a>
-
-                      {{ with .Params.tags }}
-                          <div class="tags">
-                              {{ range . }}
-                                  <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
-                              {{ end }}
-                          </div>
-                      {{ end}}
-                  </div>
+                  </span>
+                  {{ with .Params.tags }}
+                      <span class="tags">
+                      {{ range first 1 . }}
+                          <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+                      {{ end }}
+                      </span>
+                  {{ end}}
                 </div>
             {{ end }}          
         </div>

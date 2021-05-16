@@ -11,6 +11,12 @@
           ·
         </span>
         <span>
+          {{ range first 1 .Params.tags }}
+          [<a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>]
+          {{ end }}
+        </span>
+          ·
+        <span>
           {{ if lt 1 .WordCount }}
             {{ .WordCount }} words
           {{ else }}
