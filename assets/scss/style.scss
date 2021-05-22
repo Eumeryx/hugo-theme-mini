@@ -114,14 +114,14 @@ h2:hover a,
 h3:hover a,
 h4:hover a { 
 	visibility: visible
-}
-.highlight pre {
-	padding: 7px;
-}
+} 
 
 .highlight {
 	max-width: 100%;
 	overflow-x: auto;
+	pre {
+		padding: 7px;
+	}
 }
 p code {
 	font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
@@ -148,25 +148,26 @@ nav.navigation {
 	margin: 0 auto;
 	text-align: right;
 	z-index: 100;
-}
 
-nav.navigation a {
-	top: 8px;
-	right: 6px;
-	padding: 8px 12px;
-	color: #5badf0;
-	font-size: 13px;
-	line-height: 1.35;
-	border-radius: 3px;
-}
-nav.navigation a:hover {
-	color: #0366d6;
-}
+	a {
+		top: 8px;
+		right: 6px;
+		padding: 8px 12px;
+		color: #5badf0;
+		font-size: 13px;
+		line-height: 1.35;
+		border-radius: 3px;
 
-nav.navigation a.button {
-	background: #5badf0;
-	color: #fff;
-	margin-left: 12px;
+		&:hover {
+			color: #0366d6;
+		}
+
+		&.button {
+			background: #5badf0;
+			color: #fff;
+			margin-left: 12px;
+		}
+	}
 }
 @media (max-width: 700px) {
 	nav.navigation {
@@ -176,15 +177,16 @@ nav.navigation a.button {
 		margin: 0 auto;
 		text-align: right;
 		z-index: 100;
-	}
-	nav.navigation a {
-		top: 8px;
-		right: 6px;
-		padding: 8px 8px;
-		color: #5badf0;
-		font-size: 13px;
-		line-height: 1.35;
-		border-radius: 3px;
+
+		a {
+			top: 8px;
+			right: 6px;
+			padding: 8px 8px;
+			color: #5badf0;
+			font-size: 13px;
+			line-height: 1.35;
+			border-radius: 3px;
+		}
 	}
 }
 
@@ -375,7 +377,7 @@ nav.navigation a.button {
 
 	.post-toc {
 		position: fixed;
-		top: 6.5rem;
+		top: 5.0rem;
 		margin-left: $post-page-width + 20px;
 
 		h2 {
@@ -409,7 +411,7 @@ nav.navigation a.button {
 				&::marker {
 					content: '|\00A0';
 				}
-				
+
 				li::marker {
 					content: unset;
 				}
