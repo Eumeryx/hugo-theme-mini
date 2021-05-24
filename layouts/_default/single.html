@@ -39,6 +39,10 @@
       {{  .Content }}
     </div>
 
+    <div>
+      {{ partial "cc-by-sa.html" . }}
+    </div>
+
     {{ with .Params.tags }}
         <div class="tags">
             {{ range . }}
