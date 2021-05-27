@@ -7,4 +7,5 @@ $tags-page-width: {{ .Site.Params.tagsPageWidth | default "780px" }};
 $section-page-width: {{ .Site.Params.sectionPageWidth | default "780px" }};
 $page-404-width: {{ .Site.Params.page404Width | default "780px" }};
 
-@import "style.scss" 
+@import "style.scss";
+@import "_custom.scss";
