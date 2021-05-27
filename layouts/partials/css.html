@@ -1,4 +1,4 @@
 {{- $options := (dict "outputStyle" "compressed") -}}
 {{ $sassTemplate := resources.Get "scss/main.scss" }}
-{{ $style := $sassTemplate | resources.ExecuteAsTemplate "static/css/main.css" . | resources.ToCSS | resources.Minify}}
+{{ $style := $sassTemplate | resources.ExecuteAsTemplate "/css/main.css" . | resources.ToCSS | resources.Minify}}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
