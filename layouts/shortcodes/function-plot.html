@@ -1,0 +1,27 @@
+{{ if not (.Page.Scratch.Get "plotScript") }}
+    {{ .Page.Scratch.Set "plotScript" "" }}
+{{ end }}
+{{ if not (.Get "link") }}
+    {{ $id := replace (.Get "id") "-" "_" }}
+    {{ $script := ( .Inner | safeJS) }}
+    <center>
+        <div class="plot-figure">
+            <div id="{{ $id }}"></div>
+            {{ with .Get "title" }}
+                <div>{{ . }}</div>
+            {{ end }}
+            
+            {{ with .Get "explain" }}
+                <div>{{ . }}</div>
+            {{ end }}
+        </div>
+    </center>
+    {{ $string := "width=document.getElementById('$id').clientWidth;" }}
+    {{ $string = (add $string "$id=functionPlot({width,height:width/1.618,target:'#$id',$date});") }}
+    {{ $string = (replace $string "$id" $id) }}
+    {{ $string = (replace $string "$date" $script) }}
+    {{ .Page.Scratch.Add "plotScript" $string }}
+{{ else }}
+    {{ $link := replace (.Get "link") "-" "_" }}
+    {{ .Page.Scratch.Add "plotScript" $link }}
+{{ end }}

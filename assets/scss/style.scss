@@ -7,16 +7,16 @@ body {
 }
 
 .back-top {
-    position: fixed;
-    right: 1em;
-    bottom: 1em;
-    user-select: none;
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	user-select: none;
 }
 
 @media (max-width: 700px) {
-    .back-top {
-        opacity: 0.7;
-    }
+	.back-top {
+		opacity: 0.7;
+	}
 }
 
 a {
@@ -362,6 +362,14 @@ nav.navigation {
 			font-size: 24px;
 			line-height: 32px;
 		}
+
+		.plot-figure {
+			width: 100% !important;
+
+			div + div {
+				width: 90%;
+			}
+		}
 	}
 }
 
@@ -440,6 +448,29 @@ nav.navigation {
 
 	.content {
 		margin-top: 36px;
+	}
+
+	.plot-figure {
+		width: 80%;
+	}
+
+	.plot-table {
+		&tr,td {
+			border: 0;
+		}
+
+		tr:nth-child(odd)>td {
+			background: unset !important;
+		}
+
+		td {
+			width: 50%;
+			padding: 0;
+
+			.plot-figure {
+				width: 100% !important;
+			}
+		}
 	}
 
 	.tags {

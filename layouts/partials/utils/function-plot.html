@@ -1,0 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/function-plot@1.22.7/dist/function-plot.js" integrity="sha256-PGubyNWGXS3x0olOlkl8V8IrKehHKHWyecxp0UXBx/c=" crossorigin="anonymous"></script>
+{{ with .Scratch.Get "plotScript" }}
+<script>{{ . | safeJS }}</script>
+{{ end }}

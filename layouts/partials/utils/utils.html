@@ -1,5 +1,9 @@
+{{ partial "utils/back-top.html" }}
+
 {{ if .Params.katex | default .Site.Params.enableKaTeX }}
 	{{ partial "utils/katex.html" }}
 {{ end }}
 
-{{ partial "utils/back-top.html" }}
+{{ if .Params.functionPlot }}
+	{{ partial "utils/function-plot.html" . }}
+{{ end }}
