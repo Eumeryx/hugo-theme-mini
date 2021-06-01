@@ -22,6 +22,7 @@
     {{ $string = (replace $string "$date" $script) }}
     {{ .Page.Scratch.Add "plotScript" $string }}
 {{ else }}
-    {{ $link := replace (.Get "link") "-" "_" }}
+    {{ $link := (.Inner | safeJS) }}
+    {{ $link = replace $link "-" "_" }}
     {{ .Page.Scratch.Add "plotScript" $link }}
 {{ end }}
